@@ -49,6 +49,17 @@
     <url>https://github.com/cask-solutions/google-bigquery.git</url>
     <tag>HEAD</tag>
   </scm>
+  
+  <distributionManagement>
+           <repository>
+               <id>central</id>
+               <url>http://artifacts.ggn.in.guavus.com:80/libs-release-local</url>
+           </repository>
+           <snapshotRepository>
+               <id>snapshots</id>
+               <url>http://artifacts.ggn.in.guavus.com:8081/artifactory/libs-snapshot-local</url>
+           </snapshotRepository>
+  </distributionManagement>
 
   <issueManagement>
     <url>https://issues.cask.co/browse/CDAP</url>
@@ -74,24 +85,6 @@
     <avro.mapred.version>1.7.7</avro.mapred.version>
     <jackson.core.version>2.8.8</jackson.core.version>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>sonatype</id>
-      <url>https://oss.sonatype.org/content/groups/public</url>
-    </repository>
-    <repository>
-      <id>sonatype-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>sonatype</id>
-      <url>https://oss.sonatype.org/content/groups/public</url>
-    </pluginRepository>
-  </pluginRepositories>
 
   <dependencies>
     <dependency>
@@ -617,7 +610,7 @@
             </executions>
           </plugin>
 
-          <plugin>
+          <!--<plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
             <version>1.5</version>
@@ -632,7 +625,7 @@
                 </goals>
               </execution>
             </executions>
-          </plugin>
+          </plugin>-->
 
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
